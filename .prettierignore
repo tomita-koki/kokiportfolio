@@ -1,0 +1,4 @@
+dist
+node_modules
+# html-validate の void-style（<meta ...> 省略形）と衝突するため HTML は Prettier 対象外
+*.html

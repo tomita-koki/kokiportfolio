@@ -1,0 +1,22 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "selector-class-pattern": [
+      "^[a-z][a-z0-9]*(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$",
+      { "message": "クラス名は BEM（block__element--modifier）で書く" }
+    ],
+    "selector-max-type": [0, { "ignore": ["child", "descendant", "compounded"], "message": "要素セレクタで指定しない（リセット CSS は除外）" }],
+    "custom-property-pattern": null,
+    "custom-property-empty-line-before": null,
+    "import-notation": "string",
+    "property-no-vendor-prefix": [true, { "ignoreProperties": ["text-size-adjust"] }],
+    "declaration-empty-line-before": null,
+    "media-feature-range-notation": "context"
+  },
+  "overrides": [
+    {
+      "files": ["src/styles/global.css"],
+      "rules": { "selector-max-type": null }
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+.cards {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.cards__item {
+  padding: var(--space-md);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.cards__title {
+  font-size: 1.125rem;
+  margin-block-end: var(--space-xs);
+}
+
+@media (width >= 768px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-md);
+  }
+}
