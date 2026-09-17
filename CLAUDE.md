@@ -1,4 +1,4 @@
-# 案件名（ここを書き換える）
+# kokiportfolio（ポートフォリオサイト）
 
 Vite ベースの LP / 小規模サイト。共通ルールは `work/coding/CLAUDE.md` と `web-coding` スキルに従う。
 
