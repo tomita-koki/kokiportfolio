@@ -1,0 +1,39 @@
+.consultation {
+  padding-block: 3rem;
+}
+
+.consultation__inner {
+  inline-size: min(calc(100% - var(--container-padding) * 2), var(--container-width));
+  margin-inline: auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.consultation__title {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.consultation__link {
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: var(--color-bg-sub);
+  color: var(--color-primary);
+  text-align: center;
+  font-weight: 500;
+}
+
+@media (width >= 1025px) {
+  .consultation {
+    padding-block: 4rem;
+  }
+
+  .consultation__inner {
+    grid-template-columns: minmax(0, 464fr) repeat(3, minmax(0, 248fr));
+    align-items: center;
+  }
+
+  .consultation__title {
+    font-size: 1.5rem;
+  }
+}

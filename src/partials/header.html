@@ -1,23 +1,27 @@
-<header class="header" data-header>
+<header class="header" id="top">
   <div class="header__inner">
-    <a class="header__logo" href="./">サイト名</a>
+    <a class="logo" href="#top" aria-label="とこ ホーム">LOGO</a>
     <button
       class="header__toggle"
       type="button"
       aria-label="メニューを開く"
       aria-expanded="false"
-      aria-controls="global-nav"
+      aria-controls="navigation"
       data-nav-toggle
     >
-      <span class="header__toggle-bar"></span>
-      <span class="header__toggle-bar"></span>
-      <span class="header__toggle-bar"></span>
+      <span class="header__line"></span>
+      <span class="header__line"></span>
+      <span class="header__line"></span>
     </button>
-    <nav class="nav" id="global-nav" data-nav aria-label="グローバルナビゲーション">
-      <ul class="nav__list">
-        <li class="nav__item"><a class="nav__link" href="#feature">特徴</a></li>
-        <li class="nav__item"><a class="nav__link" href="#contact">お問い合わせ</a></li>
-      </ul>
+    <nav class="header__nav" id="navigation" aria-label="メインナビゲーション" data-nav>
+      <a class="header__link" href="#service">SERVICE</a>
+      <a class="header__link" href="#works">WORKS</a>
+      <a class="header__link" href="#about">ABOUT</a>
+      <a class="header__link" href="#faq">FAQ</a>
+      <a class="button button--primary" href="#contact">
+        CONTACT
+        <span aria-hidden="true">→</span>
+      </a>
     </nav>
   </div>
 </header>

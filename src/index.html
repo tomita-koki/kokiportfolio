@@ -8,53 +8,498 @@
     <meta property="og:title" content="{{title}}">
     <meta property="og:description" content="{{description}}">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="./ogp.png">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap"
+      rel="stylesheet"
+   >
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
     {{> header}}
-
-    <main class="main">
-      <section class="hero" id="top">
+    <main id="main">
+      <section class="hero" aria-labelledby="hero-title">
         <div class="hero__inner">
-          <h1 class="hero__title">キャッチコピーが入ります</h1>
-          <p class="hero__lead">リード文が入ります。ターゲットの不安に寄り添い、解決策を一言で示します。</p>
-          <a class="button button--primary" href="#contact">お問い合わせ</a>
+          <div class="hero__copy">
+            <p class="hero__eyebrow">個人で活動するあなたの、Web制作の相談相手。</p>
+            <h1 class="hero__title" id="hero-title">
+              <span class="text-line">話すことから、</span>
+              <span>
+                はじまる
+                <span class="hero__break">Web制作。</span>
+              </span>
+            </h1>
+            <p class="hero__lead">
+              <span class="text-line">
+                「何から始めればいい？」も、
+                <span class="mobile-break">聞かせてください。</span>
+              </span>
+              <span class="text-line">
+                <span class="desktop-only">あなたの</span>
+                想いや困りごとを、一緒に整理。
+              </span>
+              <span class="text-line">
+                デザインから公開後の更新まで、
+                <span class="mobile-break">ひとつの窓口で。</span>
+              </span>
+            </p>
+            <a class="button button--primary" href="#contact">
+              つくりたいことを相談する
+              <span aria-hidden="true">→</span>
+            </a>
+            <p class="hero__note">ご希望がまとまっていなくても、大丈夫です。</p>
+          </div>
+          <div class="hero__visual">
+            <p class="hero__visual-title">想いを聞いて、ひとつずつ形に。</p>
+            <img
+              src="./assets/img/sekaishi.png"
+              alt="世界史制服のWebサイト"
+              width="800"
+              height="500"
+              class="hero__image"
+              fetchpriority="high"
+           >
+            <p class="hero__caption">WORKS 01　世界史制服 様</p>
+            <p class="hero__category">コーディング・WordPress</p>
+            <p class="hero__message">話を聞く。一緒に考える。丁寧につくる。</p>
+          </div>
         </div>
       </section>
-
-      <section class="section" id="feature">
-        <div class="section__inner">
-          <h2 class="section__title">特徴</h2>
-          <ul class="cards">
-            <li class="cards__item">
-              <h3 class="cards__title">特徴 1</h3>
-              <p class="cards__text">説明文が入ります。</p>
+      <div class="consultation">
+        <div class="consultation__inner">
+          <p class="consultation__title">相談する前の「分からない」を、少しずつ。</p>
+          <a class="consultation__link" href="#faq-cost" data-faq-link>いくらかかる？　↓</a>
+          <a class="consultation__link" href="#faq-prepare" data-faq-link>何を用意する？　↓</a>
+          <a class="consultation__link" href="#service">どこまで頼める？　↓</a>
+        </div>
+      </div>
+      <section class="section service" id="service" aria-labelledby="service-title">
+        <div class="section__inner service__inner">
+          <p class="section__eyebrow">01 / SERVICE</p>
+          <div class="service__heading">
+            <h2 class="section__title" id="service-title">
+              <span>はじめの相談から、</span>
+              <span class="mobile-break">公開した、その先まで。</span>
+            </h2>
+            <p class="service__intro">
+              つくって終わりではなく、
+              <span class="mobile-break">使い続けられるサイトへ。</span>
+              <span class="mobile-break">5つのステップでお手伝いします。</span>
+            </p>
+          </div>
+          <ol class="service__steps">
+            <li class="service__step">
+              <h3 class="service__name">
+                <span class="service__number">01</span>
+                ヒアリング
+              </h3>
+              <div class="service__detail">
+                <p class="service__lead">つくりたいことを、一緒に整理。</p>
+                <p class="service__text">
+                  活動のこと、ご希望、お困りごとを伺います。必要なページや作業を整理し、費用とスケジュールをご案内します。
+                </p>
+              </div>
             </li>
-            <li class="cards__item">
-              <h3 class="cards__title">特徴 2</h3>
-              <p class="cards__text">説明文が入ります。</p>
+            <li class="service__step">
+              <h3 class="service__name">
+                <span class="service__number">02</span>
+                デザイン
+              </h3>
+              <div class="service__detail">
+                <p class="service__lead">あなたらしい、伝わる見せ方に。</p>
+                <p class="service__text">
+                  内容の構成からデザインの制作・手配まで。必要な文章や写真をご案内し、見た目と使いやすさを一緒に確かめます。
+                </p>
+              </div>
             </li>
-            <li class="cards__item">
-              <h3 class="cards__title">特徴 3</h3>
-              <p class="cards__text">説明文が入ります。</p>
+            <li class="service__step">
+              <h3 class="service__name">
+                <span class="service__number">03</span>
+                設計・実装
+              </h3>
+              <div class="service__detail">
+                <p class="service__lead">見やすく、使いやすく、動く形へ。</p>
+                <p class="service__text">
+                  PC・スマートフォンでの表示を整え、コーディングやWordPressへの組み込みを行います。画面をご確認いただきながら進めます。
+                </p>
+              </div>
             </li>
-          </ul>
+            <li class="service__step">
+              <h3 class="service__name">
+                <span class="service__number">04</span>
+                公開
+              </h3>
+              <div class="service__detail">
+                <p class="service__lead">確認を重ねて、公開へ。</p>
+                <p class="service__text">
+                  表示や動作を確認し、契約済みのサーバー・ドメインへの公開に対応します。
+                </p>
+              </div>
+            </li>
+            <li class="service__step">
+              <h3 class="service__name">
+                <span class="service__number">05</span>
+                運用・改善
+              </h3>
+              <div class="service__detail">
+                <p class="service__lead">つくったあとも、相談できる。</p>
+                <p class="service__text">
+                  文章・画像の更新、WordPressの保守、ページの修正・追加まで。活動の変化に合わせて、必要なお手伝いをご相談いただけます。
+                </p>
+              </div>
+            </li>
+          </ol>
+          <p class="service__note">
+            一件ずつ丁寧に対応します。公開後の対応範囲・費用・期間も、ご希望に合わせてお見積もりします。
+          </p>
+          <aside class="service__director" aria-label="制作会社・ディレクターの方へ">
+            <p>
+              <span class="text-line">制作会社・ディレクターの方へ</span>
+              デザインをご用意いただいてのコーディングも承ります。
+            </p>
+            <a class="button button--primary" href="#contact">
+              実装について相談する
+              <span aria-hidden="true">→</span>
+            </a>
+          </aside>
         </div>
       </section>
-
-      <section class="section section--contact" id="contact">
-        <div class="section__inner">
-          <h2 class="section__title">お問い合わせ</h2>
-          <p class="section__text">CTA の本文が入ります。</p>
-          <a class="button button--primary" href="#">フォームへ</a>
+      <section class="section works" id="works" aria-labelledby="works-title">
+        <div class="section__inner works__inner">
+          <p class="section__eyebrow">
+            <span class="desktop-only">02 / WORKS</span>
+            <span class="mobile-only">02 / SELECTED WORKS</span>
+          </p>
+          <h2 class="section__title" id="works-title">
+            <span class="desktop-only">制作実績（これまでに作ってきたもの）</span>
+            <span class="mobile-only">つくってきたもの。</span>
+          </h2>
+          <p class="works__intro">
+            <span class="text-line">実案件と自主制作をご紹介します。</span>
+            それぞれの担当範囲も、併せてご覧ください。
+          </p>
+          <div class="swiper works__slider" data-works >
+            <div class="swiper-wrapper">
+              <article class="swiper-slide works__card">
+                <a
+                  class="works__link"
+                  href="https://sekaishiseifuku.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="世界史制服 様（新しいタブで開く）"
+                >
+                  <img
+                    src="./assets/img/sekaishi.png"
+                    alt="世界史制服 様のサイト画面"
+                    width="800"
+                    height="500"
+                    class="works__image"
+                    loading="lazy"
+                 >
+                  <div class="works__caption">
+                    <p class="works__category">実案件</p>
+                    <h3 class="works__title">
+                      世界史制服 様
+                      <span aria-hidden="true">→</span>
+                    </h3>
+                    <p class="works__description">
+                      コーディング・WordPress組み込み
+                      <span class="mobile-only">2名体制の実装リーダーとして担当</span>
+                    </p>
+                  </div>
+                </a>
+              </article>
+              <article class="swiper-slide works__card">
+                <a
+                  class="works__link"
+                  href="https://koki-code.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="koki-code.com（新しいタブで開く）"
+                >
+                  <img
+                    src="./assets/img/koki.png"
+                    alt="koki-code.comのサイト画面"
+                    width="800"
+                    height="500"
+                    class="works__image"
+                    loading="lazy"
+                 >
+                  <div class="works__caption">
+                    <p class="works__category">自身のサイト</p>
+                    <h3 class="works__title">
+                      koki-code.com
+                      <span aria-hidden="true">→</span>
+                    </h3>
+                    <p class="works__description">HTML・CSS・JavaScriptによる静的サイト</p>
+                  </div>
+                </a>
+              </article>
+              <article class="swiper-slide works__card">
+                <a
+                  class="works__link"
+                  href="https://nagi-sauna.syukatutomi.workers.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="凪 — NAGI —（新しいタブで開く）"
+                >
+                  <img
+                    src="./assets/img/nagi.png"
+                    alt="凪 — NAGI —のサイト画面"
+                    width="800"
+                    height="500"
+                    class="works__image"
+                    loading="lazy"
+                 >
+                  <div class="works__caption">
+                    <p class="works__category">自主制作</p>
+                    <h3 class="works__title">
+                      凪 — NAGI —
+                      <span aria-hidden="true">→</span>
+                    </h3>
+                    <p class="works__description">山霧のサウナリトリートをテーマにしたサイト</p>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+          <div class="works__controls">
+            <p class="works__count" data-works-count aria-live="polite">01 / 03</p>
+            <div class="works__arrows">
+              <button
+                class="button button--primary button--round"
+                type="button"
+                aria-label="前の制作実績"
+                data-works-prev
+              >
+                ←
+              </button>
+              <button
+                class="button button--primary button--round"
+                type="button"
+                aria-label="次の制作実績"
+                data-works-next
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section about" id="about" aria-labelledby="about-title">
+        <div class="section__inner about__inner">
+          <p class="section__eyebrow">03 / ABOUT</p>
+          <div class="about__profile">
+            <div class="about__portrait">
+              <p class="section__eyebrow">PORTRAIT</p>
+              <p>顔写真が入ります</p>
+            </div>
+            <div class="about__bio">
+              <p class="section__eyebrow">TOKYO, JAPAN</p>
+              <h2 class="section__title" id="about-title">
+                はじめまして、
+                <span class="mobile-break">とこです。</span>
+              </h2>
+              <p>
+                <span class="text-line">東京都を拠点にWeb制作をしています。</span>
+                <span class="text-line">大切にしているのは、話を聞いて、</span>
+                <span class="text-line">一つひとつ確かめながらつくること。</span>
+              </p>
+              <p class="about__note mobile-only">※ 表示名・顔写真は公開前に差し替え予定</p>
+            </div>
+          </div>
+          <div class="about__values">
+            <h3 class="section__title">
+              <span class="text-line">気軽に話せる。</span>
+              仕事は、きちんと。
+            </h3>
+            <ol class="about__strengths">
+              <li class="about__strength">
+                <h4 class="about__strength-title">
+                  <span class="about__number">01</span>
+                  話を聞き、整理する。
+                </h4>
+                <p class="about__text">
+                  依頼内容がまとまっていなくても大丈夫。ご希望や不安を伺い、決める必要があることを一緒に整理します。
+                </p>
+              </li>
+              <li class="about__strength">
+                <h4 class="about__strength-title">
+                  <span class="about__number">02</span>
+                  先回りして、確認する。
+                </h4>
+                <p class="about__text">
+                  作り始める前に、曖昧な点を洗い出します。担当範囲外でも、気になることがあればお伝えします。
+                </p>
+              </li>
+              <li class="about__strength">
+                <h4 class="about__strength-title">
+                  <span class="about__number">03</span>
+                  分かる形で、説明する。
+                </h4>
+                <p class="about__text">
+                  言葉だけでは伝わりにくい動きは、実際に動くサンプルで。見て、確かめていただける説明を心がけています。
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+      <section class="section faq" id="faq" aria-labelledby="faq-title">
+        <div class="section__inner faq__inner">
+          <div class="faq__heading">
+            <p class="section__eyebrow">04 / FAQ</p>
+            <h2 class="section__title" id="faq-title">相談の、その前に。</h2>
+          </div>
+          <div class="faq__list">
+            <details class="faq__item" id="faq-cost" open>
+              <summary class="faq__question">
+                <span class="faq__mark" aria-hidden="true">Q</span>
+                <span>費用はどのように決まりますか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer">
+                ご希望の内容、ページ数、デザインや機能の範囲を伺って個別にお見積もりします。作業範囲と費用をご確認いただいてから着手します。ページの追加や当初の範囲を超える変更も、事前に費用をご案内します。
+              </p>
+            </details>
+            <details class="faq__item" id="faq-support">
+              <summary class="faq__question">
+                <span class="faq__mark" aria-hidden="true">Q</span>
+                <span>公開後も相談できますか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer">
+                はい。文章・画像の更新、WordPressの保守、ページの修正・追加などをご相談いただけます。対応範囲・費用・期間は、ご希望に合わせてお見積もりします。
+              </p>
+            </details>
+            <details class="faq__item" id="faq-prepare">
+              <summary class="faq__question">
+                <span class="faq__mark" aria-hidden="true">Q</span>
+                <span>何を用意してから相談すればよいですか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer">
+                まずは活動のことや、つくりたいもの、お困りのことをお聞かせください。必要な文章や写真は、お話を伺いながらご案内します。
+              </p>
+            </details>
+            <details class="faq__item" id="faq-schedule">
+              <summary class="faq__question">
+                <span class="faq__mark" aria-hidden="true">Q</span>
+                <span>予算や納期が決まっていなくても大丈夫ですか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer">
+                はい。ご希望がまとまっていなくても大丈夫です。必要なページや作業を一緒に整理し、費用とスケジュールをご案内します。
+              </p>
+            </details>
+            <details class="faq__item" id="faq-scope">
+              <summary class="faq__question">
+                <span class="faq__mark" aria-hidden="true">Q</span>
+                <span>対応していない作業はありますか？</span>
+                <span class="faq__icon" aria-hidden="true"></span>
+              </summary>
+              <p class="faq__answer">
+                必要な作業を伺ったうえで、対応できる範囲をご案内します。まずはご希望の内容をお聞かせください。
+              </p>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section class="section contact" id="contact" aria-labelledby="contact-title">
+        <div class="section__inner contact__inner">
+          <div class="contact__copy">
+            <p class="section__eyebrow">LET’S TALK</p>
+            <h2 class="section__title" id="contact-title">
+              <span class="text-line">その「つくりたい」、</span>
+              聞かせてください。
+            </h2>
+            <p>
+              <span class="text-line">まだまとまっていなくても大丈夫。</span>
+              小さな疑問から、お気軽にどうぞ。
+            </p>
+            <p class="contact__note">
+              <span class="text-line">内容を伺って、個別にお見積もりします。</span>
+              作業範囲と費用を確認してから、制作を始めます。
+            </p>
+            <span class="contact__arrow" aria-hidden="true">→</span>
+          </div>
+          <form class="contact__form" data-contact-form>
+            <div class="contact__field">
+              <label for="contact-name">
+                <span class="contact__required">必須</span>
+                　お名前
+              </label>
+              <input
+                class="contact__input"
+                id="contact-name"
+                type="text"
+                name="name"
+                autocomplete="name"
+                placeholder="山田 太郎"
+                required
+                maxlength="100"
+             >
+            </div>
+            <div class="contact__field">
+              <label for="contact-email">
+                <span class="contact__required">必須</span>
+                　メールアドレス
+              </label>
+              <input
+                class="contact__input"
+                id="contact-email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                placeholder="hello@example.com"
+                required
+                maxlength="254"
+             >
+            </div>
+            <div class="contact__field">
+              <label for="contact-message">
+                <span class="contact__required">必須</span>
+                　ご相談内容
+              </label>
+              <textarea
+                class="contact__input contact__input--message"
+                id="contact-message"
+                name="message"
+                placeholder="つくりたいもの、お困りのことなど。&#10;まだまとまっていなくても大丈夫です。"
+                required
+                maxlength="5000"
+              ></textarea>
+            </div>
+            <button class="button button--primary" type="submit">
+              入力内容を確認する
+              <span aria-hidden="true">→</span>
+            </button>
+            <noscript>
+              <p>入力内容の確認にはJavaScriptを有効にしてください。現在、送信機能は準備中です。</p>
+            </noscript>
+          </form>
         </div>
       </section>
     </main>
-
     {{> footer}}
-
+    <dialog class="confirmation" data-confirmation aria-labelledby="confirmation-title">
+      <h2 class="confirmation__title" id="confirmation-title">入力内容の確認</h2>
+      <dl class="confirmation__list">
+        <dt>お名前</dt>
+        <dd class="confirmation__value" data-confirm-name></dd>
+        <dt>メールアドレス</dt>
+        <dd class="confirmation__value" data-confirm-email></dd>
+        <dt>ご相談内容</dt>
+        <dd class="confirmation__value" data-confirm-message></dd>
+      </dl>
+      <p class="confirmation__notice">
+        お問い合わせの送信機能は準備中です。入力内容はまだ送信されていません。
+      </p>
+      <button class="button button--primary" type="button" data-confirm-close>入力に戻る</button>
+    </dialog>
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>

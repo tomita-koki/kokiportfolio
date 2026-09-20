@@ -1,35 +1,21 @@
-/* ==========================================================================
-   共通トークン
-   ========================================================================== */
 :root {
-  --color-text: #222;
-  --color-text-muted: #666;
-  --color-bg: #fff;
-  --color-bg-sub: #f5f6f8;
-  --color-primary: #1a5fb4;
-  --color-primary-hover: #154c90;
-  --color-border: #ddd;
-
-  --font-family-base: "Helvetica Neue", arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", meiryo, sans-serif;
-  --font-size-base: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
-  --line-height-base: 1.8;
-
-  --space-xs: 0.5rem;
-  --space-sm: 1rem;
-  --space-md: 2rem;
-  --space-lg: clamp(3rem, 6vw, 5rem);
-
-  --container-width: 72rem;
-  --container-padding: clamp(1rem, 4vw, 2rem);
-  --header-height: 4rem;
-
-  --radius: 0.5rem;
-  --transition: 0.25s ease;
+  --color-text: #304d60;
+  --color-text-muted: #526878;
+  --color-bg: #fffefa;
+  --color-bg-sub: #f0f7fb;
+  --color-primary: #3276aa;
+  --color-primary-hover: #245b85;
+  --color-border: #d5e3eb;
+  --color-white: #fff;
+  --color-yellow: #f8dda0;
+  --color-required: #bf2621;
+  --font-family-base: 'Zen Kaku Gothic New', 'Hiragino Kaku Gothic ProN', meiryo, sans-serif;
+  --container-width: 80rem;
+  --container-padding: 1.5rem;
+  --section-space: 4.5rem;
+  --transition: 0.2s ease;
 }
 
-/* ==========================================================================
-   リセット・ベース
-   ========================================================================== */
 *,
 *::before,
 *::after {
@@ -40,7 +26,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height);
+  scroll-padding-top: 1.5rem;
   -webkit-text-size-adjust: 100%;
 }
 
@@ -48,15 +34,13 @@ body {
   color: var(--color-text);
   background: var(--color-bg);
   font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: 0.1em;
   overflow-wrap: anywhere;
 }
 
-img,
-picture,
-svg,
-video {
+img {
   display: block;
   max-inline-size: 100%;
   block-size: auto;
@@ -72,12 +56,82 @@ ol {
   list-style: none;
 }
 
-button {
+button,
+input,
+textarea {
   font: inherit;
+  letter-spacing: inherit;
   color: inherit;
+}
+
+button {
   background: none;
-  border: none;
+  border: 0;
   cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 500;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 5px;
+}
+
+.text-line,
+.mobile-break,
+.mobile-only {
+  display: block;
+}
+
+.desktop-only {
+  display: none;
+}
+
+.skip-link {
+  position: fixed;
+  inset-block-start: -10rem;
+  inset-inline-start: 1rem;
+  padding: 1rem;
+  background: var(--color-white);
+  z-index: 100;
+}
+
+.skip-link:focus {
+  inset-block-start: 1rem;
+}
+
+@media (width >= 769px) {
+  :root {
+    --container-padding: 2.5rem;
+  }
+}
+
+@media (width >= 1025px) {
+  :root {
+    --container-padding: 5rem;
+    --section-space: 7rem;
+  }
+
+  .mobile-break {
+    display: inline;
+  }
+
+  .mobile-only {
+    display: none;
+  }
+
+  .desktop-only {
+    display: inline;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -88,7 +142,7 @@ button {
   *,
   *::before,
   *::after {
-    transition-duration: 0.01ms !important;
     animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
   }
 }

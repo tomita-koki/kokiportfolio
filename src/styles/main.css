@@ -1,12 +1,16 @@
-/* エントリ。Vite がビルド時に 1 ファイルへ結合する */
-
-/* トークン・リセット */
-@import "./global.css";
-
-/* ブロック（1ブロック = 1ファイル。追加したらここに登録） */
-@import "./blocks/header.css";
-@import "./blocks/hero.css";
-@import "./blocks/section.css";
-@import "./blocks/cards.css";
-@import "./blocks/button.css";
-@import "./blocks/footer.css";
+@import 'swiper/css';
+@import './global.css';
+@import './blocks/section.css';
+@import './blocks/logo.css';
+@import './blocks/button.css';
+@import './blocks/header.css';
+@import './blocks/hero.css';
+@import './blocks/consultation.css';
+@import './blocks/service.css';
+@import './blocks/works.css';
+@import './blocks/about.css';
+@import './blocks/faq.css';
+@import './blocks/contact.css';
+@import './blocks/confirmation.css';
+@import './blocks/footer.css';
+@import './blocks/back-top.css';

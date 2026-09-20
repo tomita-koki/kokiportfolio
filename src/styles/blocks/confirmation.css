@@ -1,0 +1,38 @@
+.confirmation {
+  margin: auto;
+  max-inline-size: min(40rem, calc(100% - 3rem));
+  max-block-size: calc(100% - 3rem);
+  padding: 2rem;
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  overflow: auto;
+}
+
+.confirmation::backdrop {
+  background: #304d6080;
+}
+
+.confirmation__title {
+  font-size: 1.5rem;
+}
+
+.confirmation__list {
+  margin-block: 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.confirmation__value {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: var(--color-bg-sub);
+}
+
+.confirmation__notice {
+  margin-block-end: 1.5rem;
+  color: var(--color-text-muted);
+}

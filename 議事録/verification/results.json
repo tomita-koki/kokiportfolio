@@ -1,0 +1,606 @@
+[
+  {
+    "channel": "chrome",
+    "width": 320,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 2503
+      },
+      {
+        "id": "works",
+        "height": 891
+      },
+      {
+        "id": "about",
+        "height": 1677
+      },
+      {
+        "id": "faq",
+        "height": 1003
+      },
+      {
+        "id": "contact",
+        "height": 1178
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 375,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 704
+      },
+      {
+        "id": "service",
+        "height": 2164
+      },
+      {
+        "id": "works",
+        "height": 841
+      },
+      {
+        "id": "about",
+        "height": 1475
+      },
+      {
+        "id": "faq",
+        "height": 947
+      },
+      {
+        "id": "contact",
+        "height": 1048
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 390,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 688
+      },
+      {
+        "id": "service",
+        "height": 2164
+      },
+      {
+        "id": "works",
+        "height": 850
+      },
+      {
+        "id": "about",
+        "height": 1475
+      },
+      {
+        "id": "faq",
+        "height": 891
+      },
+      {
+        "id": "contact",
+        "height": 1048
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 768,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1856
+      },
+      {
+        "id": "works",
+        "height": 1059
+      },
+      {
+        "id": "about",
+        "height": 1391
+      },
+      {
+        "id": "faq",
+        "height": 751
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 769,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1881
+      },
+      {
+        "id": "works",
+        "height": 816
+      },
+      {
+        "id": "about",
+        "height": 1391
+      },
+      {
+        "id": "faq",
+        "height": 751
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 1024,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1800
+      },
+      {
+        "id": "works",
+        "height": 896
+      },
+      {
+        "id": "about",
+        "height": 1307
+      },
+      {
+        "id": "faq",
+        "height": 723
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 1025,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 609
+      },
+      {
+        "id": "service",
+        "height": 1485
+      },
+      {
+        "id": "works",
+        "height": 880
+      },
+      {
+        "id": "about",
+        "height": 986
+      },
+      {
+        "id": "faq",
+        "height": 737
+      },
+      {
+        "id": "contact",
+        "height": 898
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 1440,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 1394
+      },
+      {
+        "id": "works",
+        "height": 938
+      },
+      {
+        "id": "about",
+        "height": 1111
+      },
+      {
+        "id": "faq",
+        "height": 709
+      },
+      {
+        "id": "contact",
+        "height": 764
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "width": 1920,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 1394
+      },
+      {
+        "id": "works",
+        "height": 938
+      },
+      {
+        "id": "about",
+        "height": 1111
+      },
+      {
+        "id": "faq",
+        "height": 709
+      },
+      {
+        "id": "contact",
+        "height": 764
+      }
+    ]
+  },
+  {
+    "channel": "chrome",
+    "interactions": "menu, Escape, anchor, carousel, FAQ, required fields, confirmation, safe text, dialog Escape, back top passed",
+    "errors": []
+  },
+  {
+    "channel": "msedge",
+    "width": 320,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 2503
+      },
+      {
+        "id": "works",
+        "height": 891
+      },
+      {
+        "id": "about",
+        "height": 1677
+      },
+      {
+        "id": "faq",
+        "height": 1003
+      },
+      {
+        "id": "contact",
+        "height": 1178
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 375,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 704
+      },
+      {
+        "id": "service",
+        "height": 2164
+      },
+      {
+        "id": "works",
+        "height": 841
+      },
+      {
+        "id": "about",
+        "height": 1475
+      },
+      {
+        "id": "faq",
+        "height": 947
+      },
+      {
+        "id": "contact",
+        "height": 1048
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 390,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 688
+      },
+      {
+        "id": "service",
+        "height": 2164
+      },
+      {
+        "id": "works",
+        "height": 850
+      },
+      {
+        "id": "about",
+        "height": 1475
+      },
+      {
+        "id": "faq",
+        "height": 891
+      },
+      {
+        "id": "contact",
+        "height": 1048
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 768,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1856
+      },
+      {
+        "id": "works",
+        "height": 1059
+      },
+      {
+        "id": "about",
+        "height": 1391
+      },
+      {
+        "id": "faq",
+        "height": 751
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 769,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1881
+      },
+      {
+        "id": "works",
+        "height": 816
+      },
+      {
+        "id": "about",
+        "height": 1391
+      },
+      {
+        "id": "faq",
+        "height": 751
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 1024,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 663
+      },
+      {
+        "id": "service",
+        "height": 1800
+      },
+      {
+        "id": "works",
+        "height": 896
+      },
+      {
+        "id": "about",
+        "height": 1307
+      },
+      {
+        "id": "faq",
+        "height": 723
+      },
+      {
+        "id": "contact",
+        "height": 1024
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 1025,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 609
+      },
+      {
+        "id": "service",
+        "height": 1485
+      },
+      {
+        "id": "works",
+        "height": 880
+      },
+      {
+        "id": "about",
+        "height": 986
+      },
+      {
+        "id": "faq",
+        "height": 737
+      },
+      {
+        "id": "contact",
+        "height": 898
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 1440,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 1394
+      },
+      {
+        "id": "works",
+        "height": 938
+      },
+      {
+        "id": "about",
+        "height": 1111
+      },
+      {
+        "id": "faq",
+        "height": 709
+      },
+      {
+        "id": "contact",
+        "height": 764
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "width": 1920,
+    "overflow": false,
+    "brokenImages": [],
+    "font": true,
+    "sections": [
+      {
+        "id": "hero",
+        "height": 691
+      },
+      {
+        "id": "service",
+        "height": 1394
+      },
+      {
+        "id": "works",
+        "height": 938
+      },
+      {
+        "id": "about",
+        "height": 1111
+      },
+      {
+        "id": "faq",
+        "height": 709
+      },
+      {
+        "id": "contact",
+        "height": 764
+      }
+    ]
+  },
+  {
+    "channel": "msedge",
+    "interactions": "menu, Escape, anchor, carousel, FAQ, required fields, confirmation, safe text, dialog Escape, back top passed",
+    "errors": []
+  }
+]
