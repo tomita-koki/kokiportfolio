@@ -69,3 +69,14 @@
   display: flex;
   gap: 1rem;
 }
+
+.works__eyebrow {
+  color: var(--color-primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.works__heading {
+  display: grid;
+  gap: 0.5rem;
+}

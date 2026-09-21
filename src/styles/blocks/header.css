@@ -1,7 +1,20 @@
 .header {
-  position: relative;
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
   z-index: 10;
   padding-block: 1rem;
+  background: var(--color-bg);
+  transform: translateY(-100%);
+  visibility: hidden;
+  transition:
+    transform var(--transition),
+    visibility var(--transition);
+}
+
+.header--visible {
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .header__inner {
@@ -66,7 +79,7 @@
   padding-block: 0.5rem;
 }
 
-@media (width >= 1025px) {
+@media (width >= 768px) {
   .header {
     padding-block: 1.5rem;
   }

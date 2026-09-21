@@ -11,9 +11,3 @@
   font-size: 0.75rem;
   font-weight: 500;
 }
-
-@media (width >= 1025px) {
-  .logo {
-    inline-size: 10rem;
-  }
-}

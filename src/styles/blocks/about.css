@@ -1,6 +1,6 @@
 .about {
   position: relative;
-  background: var(--color-bg) url('../../assets/img/about.svg') no-repeat right top / 160px 160px;
+  background: var(--color-bg);
 }
 
 .about__inner {
@@ -61,18 +61,18 @@
 
 .about__number {
   color: var(--color-primary);
-  inline-size: 2.5rem;
   flex-shrink: 0;
   font-size: 1.25rem;
 }
 
 .about__text {
   color: var(--color-text-muted);
+  z-index: 1;
 }
 
 @media (width >= 1025px) {
   .about {
-    background-size: 460px 460px;
+    background: var(--color-bg) url('../../assets/img/about.svg') no-repeat right top / 460px 460px;
   }
 
   .about__profile {

@@ -27,28 +27,22 @@
             <p class="hero__eyebrow">個人で活動するあなたの、Web制作の相談相手。</p>
             <h1 class="hero__title" id="hero-title">
               <span class="text-line">話すことから、</span>
-              <span>
-                はじまる
-                <span class="hero__break">Web制作。</span>
-              </span>
+              <span>はじまるWeb制作。</span>
             </h1>
             <p class="hero__lead">
               <span class="text-line">
-                「何から始めればいい？」も、
-                <span class="mobile-break">聞かせてください。</span>
+                「何から始めればいい？」も、聞かせてください。
               </span>
               <span class="text-line">
-                <span class="desktop-only">あなたの</span>
-                想いや困りごとを、一緒に整理。
+                あなたの想いや困りごとを、一緒に整理。
               </span>
               <span class="text-line">
-                デザインから公開後の更新まで、
-                <span class="mobile-break">ひとつの窓口で。</span>
+                デザインから公開後の更新まで、ひとつの窓口で。
               </span>
             </p>
             <a class="button button--primary" href="#contact">
               つくりたいことを相談する
-              <span aria-hidden="true">→</span>
+              {{> icon-arrow}}
             </a>
             <p class="hero__note">ご希望がまとまっていなくても、大丈夫です。</p>
           </div>
@@ -70,26 +64,37 @@
       </section>
       <div class="consultation">
         <div class="consultation__inner">
-          <p class="consultation__title">相談する前の「分からない」を、少しずつ。</p>
-          <a class="consultation__link" href="#faq-cost" data-faq-link>いくらかかる？　↓</a>
-          <a class="consultation__link" href="#faq-prepare" data-faq-link>何を用意する？　↓</a>
-          <a class="consultation__link" href="#service">どこまで頼める？　↓</a>
+          <p class="consultation__title">相談する前の「分からない」を、<br>
+            少しずつ。</p>
+          <div class="consultation__link-area">
+          <a class="consultation__link" href="#faq-cost" data-faq-link>
+            いくらかかる？
+            {{> icon-arrow modifier="icon-arrow--down"}}
+          </a>
+          <a class="consultation__link" href="#faq-prepare" data-faq-link>
+            何を用意する？
+            {{> icon-arrow modifier="icon-arrow--down"}}
+          </a>
+          <a class="consultation__link" href="#service">
+            どこまで頼める？
+            {{> icon-arrow modifier="icon-arrow--down"}}
+          </a>
+          </div>
         </div>
       </div>
       <section class="section service" id="service" aria-labelledby="service-title">
         <div class="section__inner service__inner">
-          <p class="section__eyebrow">01 / SERVICE</p>
-          <div class="service__heading">
+          <div class="section__heading">
+            <p class="section__eyebrow">01 / SERVICE</p>
             <h2 class="section__title" id="service-title">
-              <span>はじめの相談から、</span>
-              <span class="mobile-break">公開した、その先まで。</span>
+              <span>サービスフロー</span>
             </h2>
-            <p class="service__intro">
+          </div>
+          <p class="service__intro">
               つくって終わりではなく、
               <span class="mobile-break">使い続けられるサイトへ。</span>
               <span class="mobile-break">5つのステップでお手伝いします。</span>
             </p>
-          </div>
           <ol class="service__steps">
             <li class="service__step">
               <h3 class="service__name">
@@ -162,21 +167,17 @@
             </p>
             <a class="button button--primary" href="#contact">
               実装について相談する
-              <span aria-hidden="true">→</span>
+              {{> icon-arrow}}
             </a>
           </aside>
         </div>
       </section>
       <section class="section works" id="works" aria-labelledby="works-title">
         <div class="section__inner works__inner">
-          <p class="section__eyebrow">
-            <span class="desktop-only">02 / WORKS</span>
-            <span class="mobile-only">02 / SELECTED WORKS</span>
-          </p>
-          <h2 class="section__title" id="works-title">
-            <span class="desktop-only">制作実績（これまでに作ってきたもの）</span>
-            <span class="mobile-only">つくってきたもの。</span>
-          </h2>
+          <div class="section__heading">
+            <p class="section__eyebrow">02 / WORKS</p>
+            <h2 class="section__title" id="works-title">制作実績</h2>
+          </div>
           <p class="works__intro">
             <span class="text-line">実案件と自主制作をご紹介します。</span>
             それぞれの担当範囲も、併せてご覧ください。
@@ -203,7 +204,7 @@
                     <p class="works__category">実案件</p>
                     <h3 class="works__title">
                       世界史制服 様
-                      <span aria-hidden="true">→</span>
+                      {{> icon-arrow}}
                     </h3>
                     <p class="works__description">
                       コーディング・WordPress組み込み
@@ -232,7 +233,7 @@
                     <p class="works__category">自身のサイト</p>
                     <h3 class="works__title">
                       koki-code.com
-                      <span aria-hidden="true">→</span>
+                      {{> icon-arrow}}
                     </h3>
                     <p class="works__description">HTML・CSS・JavaScriptによる静的サイト</p>
                   </div>
@@ -258,7 +259,7 @@
                     <p class="works__category">自主制作</p>
                     <h3 class="works__title">
                       凪 — NAGI —
-                      <span aria-hidden="true">→</span>
+                      {{> icon-arrow}}
                     </h3>
                     <p class="works__description">山霧のサウナリトリートをテーマにしたサイト</p>
                   </div>
@@ -275,7 +276,7 @@
                 aria-label="前の制作実績"
                 data-works-prev
               >
-                ←
+                {{> icon-arrow modifier="icon-arrow--reverse"}}
               </button>
               <button
                 class="button button--primary button--round"
@@ -283,7 +284,7 @@
                 aria-label="次の制作実績"
                 data-works-next
               >
-                →
+                {{> icon-arrow}}
               </button>
             </div>
           </div>
@@ -308,11 +309,10 @@
                 <span class="text-line">大切にしているのは、話を聞いて、</span>
                 <span class="text-line">一つひとつ確かめながらつくること。</span>
               </p>
-              <p class="about__note mobile-only">※ 表示名・顔写真は公開前に差し替え予定</p>
             </div>
           </div>
           <div class="about__values">
-            <h3 class="section__title">
+            <h3 class="section__title-2">
               <span class="text-line">気軽に話せる。</span>
               仕事は、きちんと。
             </h3>
@@ -350,7 +350,7 @@
       </section>
       <section class="section faq" id="faq" aria-labelledby="faq-title">
         <div class="section__inner faq__inner">
-          <div class="faq__heading">
+          <div class="section__heading">
             <p class="section__eyebrow">04 / FAQ</p>
             <h2 class="section__title" id="faq-title">相談の、その前に。</h2>
           </div>
@@ -411,11 +411,13 @@
       <section class="section contact" id="contact" aria-labelledby="contact-title">
         <div class="section__inner contact__inner">
           <div class="contact__copy">
+            <div class="section__heading">
             <p class="section__eyebrow">LET’S TALK</p>
             <h2 class="section__title" id="contact-title">
               <span class="text-line">その「つくりたい」、</span>
               聞かせてください。
             </h2>
+            </div>
             <p>
               <span class="text-line">まだまとまっていなくても大丈夫。</span>
               小さな疑問から、お気軽にどうぞ。
@@ -424,7 +426,7 @@
               <span class="text-line">内容を伺って、個別にお見積もりします。</span>
               作業範囲と費用を確認してから、制作を始めます。
             </p>
-            <span class="contact__arrow" aria-hidden="true">→</span>
+            <span class="contact__arrow">{{> icon-arrow}}</span>
           </div>
           <form class="contact__form" data-contact-form>
             <div class="contact__field">
@@ -475,7 +477,7 @@
             </div>
             <button class="button button--primary" type="submit">
               入力内容を確認する
-              <span aria-hidden="true">→</span>
+              {{> icon-arrow}}
             </button>
             <noscript>
               <p>入力内容の確認にはJavaScriptを有効にしてください。現在、送信機能は準備中です。</p>

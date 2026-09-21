@@ -1,0 +1,14 @@
+.icon-arrow {
+  inline-size: 1em;
+  block-size: 1em;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.icon-arrow--reverse {
+  transform: scaleX(-1);
+}
+
+.icon-arrow--down {
+  transform: rotate(90deg);
+}

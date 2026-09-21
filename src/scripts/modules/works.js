@@ -30,7 +30,7 @@ export function initWorks() {
       nextSlideMessage: '次の制作実績',
       slideLabelMessage: '{{index}} / {{slidesLength}}',
     },
-    breakpoints: { 769: { slidesPerView: 2 }, 1025: { slidesPerView: 3 } },
+    breakpoints: { 768: { slidesPerView: 3 } },
     on: { init: update, slideChange: update, breakpoint: update, resize: update },
   });
 }

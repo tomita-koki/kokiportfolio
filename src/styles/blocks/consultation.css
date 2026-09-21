@@ -5,7 +5,8 @@
 .consultation__inner {
   inline-size: min(calc(100% - var(--container-padding) * 2), var(--container-width));
   margin-inline: auto;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 1.5rem;
 }
 
@@ -14,26 +15,40 @@
   font-weight: 500;
 }
 
+.consultation__link-area {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
 .consultation__link {
   padding: 1rem;
   border-radius: 1.5rem;
   background: var(--color-bg-sub);
   color: var(--color-primary);
-  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   font-weight: 500;
 }
 
-@media (width >= 1025px) {
+@media (width >= 768px) {
   .consultation {
     padding-block: 4rem;
   }
 
+  .consultation__link-area {
+    justify-content: flex-start;
+  }
+
   .consultation__inner {
-    grid-template-columns: minmax(0, 464fr) repeat(3, minmax(0, 248fr));
-    align-items: center;
+    flex-direction: row;
   }
 
   .consultation__title {
     font-size: 1.5rem;
+    min-width: 384px;
   }
 }

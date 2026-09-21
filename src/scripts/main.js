@@ -18,3 +18,13 @@ if (backTop) {
   window.addEventListener('scroll', update, { passive: true });
   update();
 }
+const header = document.querySelector('.header');
+const hero = document.querySelector('.hero');
+if (header && hero) {
+  const update = () => {
+    header.classList.toggle('header--visible', window.scrollY >= hero.offsetHeight);
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+}

@@ -25,7 +25,7 @@
   color: var(--color-text-muted);
 }
 
-@media (width >= 1025px) {
+@media (width >= 768px) {
   .footer__row {
     flex-direction: row;
     justify-content: space-between;

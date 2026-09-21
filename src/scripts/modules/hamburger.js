@@ -2,7 +2,7 @@ export function initHamburger() {
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
   if (!toggle || !nav) return;
-  const desktop = matchMedia('(min-width: 1025px)');
+  const desktop = matchMedia('(min-width: 768px)');
   const setOpen = (open, focus = false) => {
     nav.classList.toggle('header__nav--open', open);
     toggle.setAttribute('aria-expanded', String(open));
