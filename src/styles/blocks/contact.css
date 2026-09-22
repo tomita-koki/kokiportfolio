@@ -3,7 +3,7 @@
 
   position: relative;
   overflow: hidden;
-  padding-block-end: calc(var(--section-space) + var(--contact-wave-height));
+  padding-block-start: calc(var(--section-space) + var(--contact-wave-height));
   color: var(--color-white);
   background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-hover));
 }
@@ -99,10 +99,11 @@
 .contact__waves {
   position: absolute;
   inset-inline-start: 0;
-  inset-block-end: -1px;
+  inset-block-start: -1px;
   display: block;
   inline-size: 100%;
   block-size: var(--contact-wave-height);
+  transform: scaleY(-1);
   pointer-events: none;
 }
 
