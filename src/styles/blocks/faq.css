@@ -12,7 +12,7 @@
   inset-block-start: -116px;
   inline-size: 160px;
   block-size: 289px;
-  background: url('../../assets/img/faq.svg') center / contain no-repeat;
+  background: url('../../assets/img/part/faq.svg') center / contain no-repeat;
   pointer-events: none;
 }
 
@@ -55,7 +55,7 @@
   content: '＋';
 }
 
-.faq__item[open] .faq__icon::before {
+.faq__item[open]:not(.faq__item--closing) .faq__icon::before {
   content: '−';
 }
 
@@ -70,11 +70,6 @@
   font-weight: 500;
 }
 
-.faq__heading {
-  display: grid;
-  gap: 0.5rem;
-}
-
 @media (width >= 1025px) {
   .faq::before {
     inline-size: 411px;
@@ -87,3 +82,4 @@
     gap: 5rem;
   }
 }
+

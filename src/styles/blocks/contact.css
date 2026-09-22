@@ -1,7 +1,11 @@
 .contact {
+  --contact-wave-height: clamp(3.5rem, 9vw, 9rem);
+
   position: relative;
-  background: var(--color-bg-sub) url('../../assets/img/contact.svg') no-repeat center bottom / 100%
-    auto;
+  overflow: hidden;
+  padding-block-end: calc(var(--section-space) + var(--contact-wave-height));
+  color: var(--color-white);
+  background: linear-gradient(to bottom, var(--color-primary), var(--color-primary-hover));
 }
 
 .contact__inner {
@@ -18,7 +22,7 @@
 
 .contact__note {
   font-size: 0.875rem;
-  color: var(--color-text-muted);
+  color: inherit;
 }
 
 .contact__arrow {
@@ -40,7 +44,7 @@
 }
 
 .contact__required {
-  color: var(--color-required);
+  color: var(--color-white);
   font-weight: 700;
 }
 
@@ -49,6 +53,7 @@
   min-inline-size: 0;
   min-block-size: 3.5rem;
   border: 1px solid var(--color-border);
+  color: var(--color-text);
   background: var(--color-white);
   border-radius: 1rem;
   padding: 0.75rem 1rem;
@@ -74,10 +79,70 @@
   .contact__arrow {
     display: block;
     font-size: 6rem;
-    color: var(--color-primary);
+    color: inherit;
   }
 
   .contact__form {
   align-items: flex-start;
 }
+}
+
+
+.contact__eyebrow {
+  color: inherit;
+}
+
+.contact__submit {
+  border: 1px solid currentcolor;
+}
+
+.contact__waves {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-end: -1px;
+  display: block;
+  inline-size: 100%;
+  block-size: var(--contact-wave-height);
+  pointer-events: none;
+}
+
+.contact__wave {
+  animation: contact-wave-drift 14s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.contact__wave--back {
+  animation-delay: -2s;
+}
+
+.contact__wave--middle {
+  animation-duration: 22s;
+  animation-delay: -3s;
+}
+
+.contact__wave--near {
+  animation-duration: 28s;
+  animation-delay: -4s;
+}
+
+.contact__wave--front {
+  animation-duration: 35s;
+  animation-delay: -5s;
+}
+
+/* SVG user units: move exactly one complete wave to keep the loop seamless. */
+@keyframes contact-wave-drift {
+  from {
+    transform: translateX(-1440px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact__wave {
+    animation: none;
+    transform: none;
+  }
 }

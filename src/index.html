@@ -11,10 +11,7 @@
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-   >
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
@@ -22,6 +19,7 @@
     {{> header}}
     <main id="main">
       <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__shapes" data-hero-shapes aria-hidden="true"></div>
         <div class="hero__inner">
           <div class="hero__copy">
             <p class="hero__eyebrow">個人で活動するあなたの、Web制作の相談相手。</p>
@@ -42,47 +40,48 @@
             </p>
             <a class="button button--primary" href="#contact">
               つくりたいことを相談する
-              {{> icon-arrow}}
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </a>
             <p class="hero__note">ご希望がまとまっていなくても、大丈夫です。</p>
           </div>
           <div class="hero__visual">
             <p class="hero__visual-title">想いを聞いて、ひとつずつ形に。</p>
-            <img
-              src="./assets/img/sekaishi.png"
-              alt="世界史制服のWebサイト"
-              width="800"
-              height="500"
-              class="hero__image"
-              fetchpriority="high"
-           >
+            <img src="./assets/img/works/img-work-01.png" alt="世界史制服のWebサイト" width="800" height="500" class="hero__image" fetchpriority="high">
             <p class="hero__caption">WORKS 01　世界史制服 様</p>
             <p class="hero__category">コーディング・WordPress</p>
             <p class="hero__message">話を聞く。一緒に考える。丁寧につくる。</p>
           </div>
         </div>
       </section>
-      <div class="consultation">
+      <div class="consultation reveal" data-reveal>
         <div class="consultation__inner">
           <p class="consultation__title">相談する前の「分からない」を、<br>
             少しずつ。</p>
           <div class="consultation__link-area">
           <a class="consultation__link" href="#faq-cost" data-faq-link>
             いくらかかる？
-            {{> icon-arrow modifier="icon-arrow--down"}}
+            <svg class="icon-arrow icon-arrow--down" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </a>
           <a class="consultation__link" href="#faq-prepare" data-faq-link>
             何を用意する？
-            {{> icon-arrow modifier="icon-arrow--down"}}
+            <svg class="icon-arrow icon-arrow--down" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </a>
           <a class="consultation__link" href="#service">
             どこまで頼める？
-            {{> icon-arrow modifier="icon-arrow--down"}}
+            <svg class="icon-arrow icon-arrow--down" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
           </a>
           </div>
         </div>
       </div>
-      <section class="section service" id="service" aria-labelledby="service-title">
+      <section class="section service reveal" data-reveal id="service" aria-labelledby="service-title">
         <div class="section__inner service__inner">
           <div class="section__heading">
             <p class="section__eyebrow">01 / SERVICE</p>
@@ -167,12 +166,14 @@
             </p>
             <a class="button button--primary" href="#contact">
               実装について相談する
-              {{> icon-arrow}}
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </a>
           </aside>
         </div>
       </section>
-      <section class="section works" id="works" aria-labelledby="works-title">
+      <section class="section works reveal" data-reveal id="works" aria-labelledby="works-title">
         <div class="section__inner works__inner">
           <div class="section__heading">
             <p class="section__eyebrow">02 / WORKS</p>
@@ -185,26 +186,15 @@
           <div class="swiper works__slider" data-works >
             <div class="swiper-wrapper">
               <article class="swiper-slide works__card">
-                <a
-                  class="works__link"
-                  href="https://sekaishiseifuku.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="世界史制服 様（新しいタブで開く）"
-                >
-                  <img
-                    src="./assets/img/sekaishi.png"
-                    alt="世界史制服 様のサイト画面"
-                    width="800"
-                    height="500"
-                    class="works__image"
-                    loading="lazy"
-                 >
+                <a class="works__link" href="https://sekaishiseifuku.com/" target="_blank" rel="noopener noreferrer" aria-label="世界史制服 様（新しいタブで開く）">
+                  <img src="./assets/img/works/img-work-01.png" alt="世界史制服 様のサイト画面" width="800" height="500" class="works__image" loading="lazy">
                   <div class="works__caption">
                     <p class="works__category">実案件</p>
                     <h3 class="works__title">
                       世界史制服 様
-                      {{> icon-arrow}}
+                      <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
                     </h3>
                     <p class="works__description">
                       コーディング・WordPress組み込み
@@ -214,52 +204,30 @@
                 </a>
               </article>
               <article class="swiper-slide works__card">
-                <a
-                  class="works__link"
-                  href="https://koki-code.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="koki-code.com（新しいタブで開く）"
-                >
-                  <img
-                    src="./assets/img/koki.png"
-                    alt="koki-code.comのサイト画面"
-                    width="800"
-                    height="500"
-                    class="works__image"
-                    loading="lazy"
-                 >
+                <a class="works__link" href="https://koki-code.com/" target="_blank" rel="noopener noreferrer" aria-label="koki-code.com（新しいタブで開く）">
+                  <img src="./assets/img/works/img-work-02.png" alt="koki-code.comのサイト画面" width="800" height="500" class="works__image" loading="lazy">
                   <div class="works__caption">
                     <p class="works__category">自身のサイト</p>
                     <h3 class="works__title">
                       koki-code.com
-                      {{> icon-arrow}}
+                      <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
                     </h3>
                     <p class="works__description">HTML・CSS・JavaScriptによる静的サイト</p>
                   </div>
                 </a>
               </article>
               <article class="swiper-slide works__card">
-                <a
-                  class="works__link"
-                  href="https://nagi-sauna.syukatutomi.workers.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="凪 — NAGI —（新しいタブで開く）"
-                >
-                  <img
-                    src="./assets/img/nagi.png"
-                    alt="凪 — NAGI —のサイト画面"
-                    width="800"
-                    height="500"
-                    class="works__image"
-                    loading="lazy"
-                 >
+                <a class="works__link" href="https://nagi-sauna.syukatutomi.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="凪 — NAGI —（新しいタブで開く）">
+                  <img src="./assets/img/works/img-work-03.png" alt="凪 — NAGI —のサイト画面" width="800" height="500" class="works__image" loading="lazy">
                   <div class="works__caption">
                     <p class="works__category">自主制作</p>
                     <h3 class="works__title">
                       凪 — NAGI —
-                      {{> icon-arrow}}
+                      <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
                     </h3>
                     <p class="works__description">山霧のサウナリトリートをテーマにしたサイト</p>
                   </div>
@@ -270,33 +238,26 @@
           <div class="works__controls">
             <p class="works__count" data-works-count aria-live="polite">01 / 03</p>
             <div class="works__arrows">
-              <button
-                class="button button--primary button--round"
-                type="button"
-                aria-label="前の制作実績"
-                data-works-prev
-              >
-                {{> icon-arrow modifier="icon-arrow--reverse"}}
+              <button class="button button--primary button--round" type="button" aria-label="前の制作実績" data-works-prev>
+                <svg class="icon-arrow icon-arrow--reverse" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
               </button>
-              <button
-                class="button button--primary button--round"
-                type="button"
-                aria-label="次の制作実績"
-                data-works-next
-              >
-                {{> icon-arrow}}
+              <button class="button button--primary button--round" type="button" aria-label="次の制作実績" data-works-next>
+                <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                  <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
               </button>
             </div>
           </div>
         </div>
       </section>
-      <section class="section about" id="about" aria-labelledby="about-title">
+      <section class="section about reveal" data-reveal id="about" aria-labelledby="about-title">
         <div class="section__inner about__inner">
           <p class="section__eyebrow">03 / ABOUT</p>
           <div class="about__profile">
             <div class="about__portrait">
-              <p class="section__eyebrow">PORTRAIT</p>
-              <p>顔写真が入ります</p>
+              <img src="./assets/img/about/profile.png" alt="とこのプロフィール写真" width="1043" height="936" loading="lazy" decoding="async">
             </div>
             <div class="about__bio">
               <p class="section__eyebrow">TOKYO, JAPAN</p>
@@ -348,13 +309,13 @@
           </div>
         </div>
       </section>
-      <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <section class="section faq reveal" data-reveal id="faq" aria-labelledby="faq-title">
         <div class="section__inner faq__inner">
           <div class="section__heading">
             <p class="section__eyebrow">04 / FAQ</p>
             <h2 class="section__title" id="faq-title">相談の、その前に。</h2>
           </div>
-          <div class="faq__list">
+          <div class="faq__list" data-faq>
             <details class="faq__item" id="faq-cost" open>
               <summary class="faq__question">
                 <span class="faq__mark" aria-hidden="true">Q</span>
@@ -408,11 +369,11 @@
           </div>
         </div>
       </section>
-      <section class="section contact" id="contact" aria-labelledby="contact-title">
+      <section class="section contact reveal" data-reveal id="contact" aria-labelledby="contact-title">
         <div class="section__inner contact__inner">
           <div class="contact__copy">
             <div class="section__heading">
-            <p class="section__eyebrow">LET’S TALK</p>
+            <p class="section__eyebrow contact__eyebrow">LET’S TALK</p>
             <h2 class="section__title" id="contact-title">
               <span class="text-line">その「つくりたい」、</span>
               聞かせてください。
@@ -426,7 +387,11 @@
               <span class="text-line">内容を伺って、個別にお見積もりします。</span>
               作業範囲と費用を確認してから、制作を始めます。
             </p>
-            <span class="contact__arrow">{{> icon-arrow}}</span>
+            <span class="contact__arrow">
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
           </div>
           <form class="contact__form" data-contact-form>
             <div class="contact__field">
@@ -434,56 +399,43 @@
                 <span class="contact__required">必須</span>
                 　お名前
               </label>
-              <input
-                class="contact__input"
-                id="contact-name"
-                type="text"
-                name="name"
-                autocomplete="name"
-                placeholder="山田 太郎"
-                required
-                maxlength="100"
-             >
+              <input class="contact__input" id="contact-name" type="text" name="name" autocomplete="name" placeholder="山田 太郎" required maxlength="100">
             </div>
             <div class="contact__field">
               <label for="contact-email">
                 <span class="contact__required">必須</span>
                 　メールアドレス
               </label>
-              <input
-                class="contact__input"
-                id="contact-email"
-                name="email"
-                type="email"
-                autocomplete="email"
-                placeholder="hello@example.com"
-                required
-                maxlength="254"
-             >
+              <input class="contact__input" id="contact-email" name="email" type="email" autocomplete="email" placeholder="hello@example.com" required maxlength="254">
             </div>
             <div class="contact__field">
               <label for="contact-message">
                 <span class="contact__required">必須</span>
                 　ご相談内容
               </label>
-              <textarea
-                class="contact__input contact__input--message"
-                id="contact-message"
-                name="message"
-                placeholder="つくりたいもの、お困りのことなど。&#10;まだまとまっていなくても大丈夫です。"
-                required
-                maxlength="5000"
-              ></textarea>
+              <textarea class="contact__input contact__input--message" id="contact-message" name="message" placeholder="つくりたいもの、お困りのことなど。&#10;まだまとまっていなくても大丈夫です。" required maxlength="5000"></textarea>
             </div>
-            <button class="button button--primary" type="submit">
+            <button class="button button--primary contact__submit" type="submit">
               入力内容を確認する
-              {{> icon-arrow}}
+              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
             </button>
             <noscript>
               <p>入力内容の確認にはJavaScriptを有効にしてください。現在、送信機能は準備中です。</p>
             </noscript>
           </form>
         </div>
+        <svg class="contact__waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <defs>
+            <!-- One period is 1440 units; three periods cover every animation phase. -->
+            <path id="contact-wave" d="M-1440 40 Q-1080 0 -720 40 T0 40 T720 40 T1440 40 T2160 40 T2880 40 V100 H-1440 Z"></path>
+          </defs>
+          <use class="contact__wave contact__wave--back" href="#contact-wave" y="0" fill="white" fill-opacity="0.7"></use>
+          <use class="contact__wave contact__wave--middle" href="#contact-wave" y="3" fill="white" fill-opacity="0.5"></use>
+          <use class="contact__wave contact__wave--near" href="#contact-wave" y="5" fill="white" fill-opacity="0.3"></use>
+          <use class="contact__wave contact__wave--front" href="#contact-wave" y="7" fill="white" fill-opacity="1"></use>
+        </svg>
       </section>
     </main>
     {{> footer}}
@@ -505,3 +457,4 @@
     <script type="module" src="./scripts/main.js"></script>
   </body>
 </html>
+

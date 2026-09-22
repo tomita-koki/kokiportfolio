@@ -1,14 +1,7 @@
 <header class="header" id="top">
   <div class="header__inner">
     <a class="logo" href="#top" aria-label="とこ ホーム">LOGO</a>
-    <button
-      class="header__toggle"
-      type="button"
-      aria-label="メニューを開く"
-      aria-expanded="false"
-      aria-controls="navigation"
-      data-nav-toggle
-    >
+    <button class="header__toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="navigation" data-nav-toggle>
       <span class="header__line"></span>
       <span class="header__line"></span>
       <span class="header__line"></span>
@@ -20,7 +13,9 @@
       <a class="header__link" href="#faq">FAQ</a>
       <a class="button button--primary" href="#contact">
         CONTACT
-        {{> icon-arrow}}
+        <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+          <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
       </a>
     </nav>
   </div>

@@ -24,7 +24,7 @@
 
 .consultation__link {
   padding: 1rem;
-  border-radius: 1.5rem;
+  border-radius: 2.0rem;
   background: var(--color-bg-sub);
   color: var(--color-primary);
   display: inline-flex;

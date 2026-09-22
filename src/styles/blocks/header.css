@@ -58,20 +58,29 @@
 }
 
 .header__nav {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 1.5rem;
   position: absolute;
   inset-block-start: 100%;
   inset-inline: 0;
   background: var(--color-bg);
   padding: 2rem var(--container-padding);
   box-shadow: 0 12px 18px #304d6010;
+  opacity: 0;
+  transform: translateY(-0.5rem);
+  visibility: hidden;
+  transition:
+    opacity var(--transition),
+    transform var(--transition),
+    visibility var(--transition);
 }
 
 .header__nav--open {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1.5rem;
+  opacity: 1;
+  transform: none;
+  visibility: visible;
 }
 
 .header__link {
@@ -89,11 +98,14 @@
   }
 
   .header__nav {
-    display: flex;
+    flex-direction: row;
     position: static;
     align-items: center;
-    gap: 1.5rem;
     padding: 0;
     box-shadow: none;
+    opacity: 1;
+    transform: none;
+    visibility: inherit;
+    transition: none;
   }
 }

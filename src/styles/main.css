@@ -1,6 +1,7 @@
 @import 'swiper/css';
 @import './global.css';
 @import './blocks/section.css';
+@import './blocks/reveal.css';
 @import './blocks/logo.css';
 @import './blocks/icon-arrow.css';
 @import './blocks/button.css';

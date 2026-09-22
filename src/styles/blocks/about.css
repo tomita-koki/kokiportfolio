@@ -18,14 +18,15 @@
   inline-size: min(280px, 100%);
   aspect-ratio: 1;
   border-radius: 50%;
+  overflow: hidden;
   background: var(--color-bg-sub);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
   justify-self: center;
-  color: var(--color-text-muted);
+}
+
+.about__portrait img {
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
 }
 
 .about__bio {
@@ -72,7 +73,7 @@
 
 @media (width >= 1025px) {
   .about {
-    background: var(--color-bg) url('../../assets/img/about.svg') no-repeat right top / 460px 460px;
+    background: var(--color-bg) url('../../assets/img/part/about.svg') no-repeat right top / 460px 460px;
   }
 
   .about__profile {

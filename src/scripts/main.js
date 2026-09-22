@@ -1,15 +1,14 @@
+import { initHeroMotion } from './modules/hero-motion.js';
 import { initHamburger } from './modules/hamburger.js';
 import { initWorks } from './modules/works.js';
 import { initContact } from './modules/contact.js';
+import { initFaq } from './modules/faq.js';
+import { initReveal } from './modules/reveal.js';
 initHamburger();
 initWorks();
 initContact();
-document.querySelectorAll('[data-faq-link]').forEach((link) =>
-  link.addEventListener('click', () => {
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) target.open = true;
-  }),
-);
+initFaq();
+initReveal();
 const backTop = document.querySelector('[data-back-top]');
 if (backTop) {
   const update = () => {
@@ -28,3 +27,5 @@ if (header && hero) {
   window.addEventListener('resize', update);
   update();
 }
+
+initHeroMotion();

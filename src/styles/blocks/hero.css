@@ -7,19 +7,37 @@
   min-block-size: 100vh;
   min-block-size: 100svh;
   padding-block: 3rem 3.5rem;
-  background: var(--color-bg-sub) url('../../assets/img/shape-0.svg') no-repeat right 22px top
-    24px / 88px 88px;
+  background: var(--color-bg-sub);
 }
 
-.hero::after {
-  content: '';
+.hero__shapes {
   position: absolute;
+  inset: 0;
   pointer-events: none;
-  inline-size: 120px;
-  block-size: 120px;
-  inset-block-start: 380px;
-  inset-inline-end: -20px;
-  background: url('../../assets/img/shape-1.svg') center / contain no-repeat;
+}
+
+.hero__shape {
+  position: absolute;
+  inline-size: calc(var(--circle-size) * 0.65);
+  block-size: calc(var(--circle-size) * 0.65);
+  border-radius: 50%;
+}
+
+.hero__shape--pc {
+  display: none;
+}
+
+@media (width >= 601px) {
+  .hero__shape {
+    inline-size: var(--circle-size);
+    block-size: var(--circle-size);
+  }
+}
+
+@media (width >= 768px) {
+  .hero__shape--pc {
+    display: block;
+  }
 }
 
 .hero__inner {
@@ -64,21 +82,9 @@
 @media (width >= 768px) {
   .hero {
     padding-block: 4.5rem 5.5rem;
-    background-position: left calc(50% + 20px) top 24px;
-    background-size: 120px 120px;
   }
 
-  .hero::before {
-    content: '';
-    position: absolute;
-    inset-inline-start: 24px;
-    inset-block-end: 24px;
-    inline-size: 100px;
-    block-size: 100px;
-    background: url('../../assets/img/shape-2.svg') center / contain no-repeat;
-  }
-
-  .hero::after {
+  .hero__shape--1 {
     inline-size: 200px;
     block-size: 200px;
     inset-block: auto 28px;

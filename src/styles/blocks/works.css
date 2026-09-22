@@ -16,8 +16,10 @@
 .works__slider {
   inline-size: 100%;
   min-inline-size: 0;
-  padding: 5px;
-  margin: -5px;
+
+  /* Room for the hover zoom (scale 1.05) and focus outlines; keep in sync with works.js. */
+  padding: 0.75rem;
+  margin: -0.75rem;
   box-sizing: content-box;
 }
 
@@ -30,6 +32,17 @@
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.works__link:focus-visible {
+  transform: scale(1.05);
+}
+
+@media (hover: hover) {
+  .works__link:hover {
+    transform: scale(1.05);
+  }
 }
 
 .works__image {
