@@ -1,9 +1,10 @@
-import { initHeroMotion } from './modules/hero-motion.js';
 import { initHamburger } from './modules/hamburger.js';
 import { initWorks } from './modules/works.js';
 import { initContact } from './modules/contact.js';
 import { initFaq } from './modules/faq.js';
 import { initReveal } from './modules/reveal.js';
+import { initLoading } from './modules/loading.js';
+initLoading();
 initHamburger();
 initWorks();
 initContact();
@@ -28,4 +29,3 @@ if (header && hero) {
   update();
 }
 
-initHeroMotion();

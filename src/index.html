@@ -3,6 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      document.documentElement.classList.add('loading-active');
+      // If the module or a resource fails, always return control to the visitor.
+      window.setTimeout(() => {
+        document.dispatchEvent(new Event('loading-timeout'));
+        document.documentElement.classList.remove('loading-active');
+        document.querySelector('[data-loading]')?.remove();
+      }, 12000);
+    </script>
     <title>{{title}}</title>
     <meta name="description" content="{{description}}">
     <meta property="og:title" content="{{title}}">
@@ -15,19 +24,41 @@
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
+    <div class="loading" data-loading>
+      <progress class="loading__accessible" data-loading-accessible max="100" value="0" aria-label="ページを読み込んでいます"></progress>
+      <svg class="loading__surface" data-loading-surface xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+        <defs>
+          <mask id="loading-aperture" maskUnits="userSpaceOnUse" x="0" y="0" width="100%" height="100%">
+            <rect width="100%" height="100%" fill="white"></rect>
+            <circle data-loading-hole cx="0" cy="0" r="0" fill="black"></circle>
+          </mask>
+        </defs>
+        <rect width="100%" height="100%" fill="white" mask="url(#loading-aperture)"></rect>
+        <circle class="loading__track" data-loading-ring cx="50%" cy="50%" r="56" fill="none" stroke-width="3"></circle>
+        <circle class="loading__progress" data-loading-ring data-loading-progress cx="50%" cy="50%" r="56" fill="none" stroke-width="3" stroke-dasharray="351.859" stroke-dashoffset="351.859"></circle>
+      </svg>
+      <div class="loading__label" data-loading-label aria-hidden="true">
+        <span class="loading__value" data-loading-value>0%</span>
+        <span>Loading…</span>
+      </div>
+    </div>
     <a class="skip-link" href="#main">本文へ移動</a>
     {{> header}}
     <main id="main">
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__shapes" data-hero-shapes aria-hidden="true"></div>
+      <section class="hero" data-hero aria-labelledby="hero-title">
+        <div class="hero__shapes" data-hero-background aria-hidden="true">
+          <span class="hero__shape hero__shape--0"></span>
+          <span class="hero__shape hero__shape--1"></span>
+          <span class="hero__shape hero__shape--2"></span>
+        </div>
         <div class="hero__inner">
           <div class="hero__copy">
-            <p class="hero__eyebrow">個人で活動するあなたの、Web制作の相談相手。</p>
-            <h1 class="hero__title" id="hero-title">
+            <p class="hero__eyebrow" data-hero-enter>個人で活動するあなたの、Web制作の相談相手。</p>
+            <h1 class="hero__title" id="hero-title" data-hero-enter>
               <span class="text-line">話すことから、</span>
               <span>はじまるWeb制作。</span>
             </h1>
-            <p class="hero__lead">
+            <p class="hero__lead" data-hero-enter>
               <span class="text-line">
                 「何から始めればいい？」も、聞かせてください。
               </span>
@@ -38,17 +69,17 @@
                 デザインから公開後の更新まで、ひとつの窓口で。
               </span>
             </p>
-            <a class="button button--primary" href="#contact">
+            <a class="button button--primary" href="#contact" data-hero-enter>
               つくりたいことを相談する
               <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
                 <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
             </a>
-            <p class="hero__note">ご希望がまとまっていなくても、大丈夫です。</p>
+            <p class="hero__note" data-hero-enter>ご希望がまとまっていなくても、大丈夫です。</p>
           </div>
           <div class="hero__visual">
             <p class="hero__visual-title">想いを聞いて、ひとつずつ形に。</p>
-            <img src="./assets/img/works/img-work-01.png" alt="世界史制服のWebサイト" width="800" height="500" class="hero__image" fetchpriority="high">
+            <img src="./assets/img/works/img-work-01.png" alt="世界史制服のWebサイト" width="800" height="500" class="hero__image" data-hero-background fetchpriority="high">
             <p class="hero__caption">WORKS 01　世界史制服 様</p>
             <p class="hero__category">コーディング・WordPress</p>
             <p class="hero__message">話を聞く。一緒に考える。丁寧につくる。</p>

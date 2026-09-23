@@ -1,0 +1,70 @@
+.loading {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  overflow: hidden;
+  color: var(--color-primary);
+  touch-action: none;
+}
+
+.loading-active {
+  overflow: hidden;
+}
+
+.loading-active .loading {
+  display: grid;
+  place-items: center;
+}
+
+.loading__surface {
+  position: absolute;
+  inset: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+.loading__accessible {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+.loading__track {
+  stroke: #e5edf3;
+}
+
+.loading__progress {
+  stroke: currentcolor;
+}
+
+.loading__label {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.loading__value {
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.loading-active [data-hero-enter] {
+  opacity: 0;
+}
+
+.loading-active [data-hero-background] {
+  transform: scale(1.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loading-active [data-hero-background] {
+    transform: none;
+  }
+}

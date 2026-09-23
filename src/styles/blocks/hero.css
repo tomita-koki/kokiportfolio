@@ -18,26 +18,31 @@
 
 .hero__shape {
   position: absolute;
-  inline-size: calc(var(--circle-size) * 0.65);
-  block-size: calc(var(--circle-size) * 0.65);
-  border-radius: 50%;
+  background: center / contain no-repeat;
 }
 
-.hero__shape--pc {
-  display: none;
+.hero__shape--0 {
+  inline-size: 88px;
+  block-size: 88px;
+  inset-block-start: 24px;
+  inset-inline-end: 22px;
+  background-image: url('../../assets/img/part/shape-0.svg');
 }
 
-@media (width >= 601px) {
-  .hero__shape {
-    inline-size: var(--circle-size);
-    block-size: var(--circle-size);
-  }
+.hero__shape--1 {
+  inline-size: 120px;
+  block-size: 120px;
+  inset-block-start: 380px;
+  inset-inline-end: -20px;
+  background-image: url('../../assets/img/part/shape-1.svg');
 }
 
-@media (width >= 768px) {
-  .hero__shape--pc {
-    display: block;
-  }
+.hero__shape--2 {
+  inline-size: 65px;
+  block-size: 65px;
+  inset-inline-start: 24px;
+  inset-block-end: 24px;
+  background-image: url('../../assets/img/part/shape-2.svg');
 }
 
 .hero__inner {
@@ -82,6 +87,17 @@
 @media (width >= 768px) {
   .hero {
     padding-block: 4.5rem 5.5rem;
+  }
+
+  .hero__shape--0 {
+    inline-size: 120px;
+    block-size: 120px;
+    inset-inline: calc(50% + 20px) auto;
+  }
+
+  .hero__shape--2 {
+    inline-size: 100px;
+    block-size: 100px;
   }
 
   .hero__shape--1 {
