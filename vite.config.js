@@ -1,36 +1,24 @@
 import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
-import handlebars from 'vite-plugin-handlebars';
 
 /**
- * ページごとに差し込む値。ページを増やしたら input と pageData の両方に追加する。
- * index.html の title / description は HTML に直接書いてあるのでここには置かない。
+ * WordPress 子テーマ用のビルド。HTML は wordpress/swell_child/*.php に直接書く。
+ * CSS・JS をテーマの assets/ に出力し、functions.php が manifest.json から読み込む。
  */
-const pageData = {};
-
 export default defineConfig({
   root: 'src',
-  publicDir: '../public',
-  base: './', // 相対パス納品（サブディレクトリ設置でも壊れない）
+  base: './',
+  publicDir: false,
   build: {
-    outDir: '../dist',
+    outDir: resolve(__dirname, 'wordpress/swell_child/assets'),
     emptyOutDir: true,
+    assetsDir: '',
+    manifest: true,
     rollupOptions: {
       input: {
-        index: resolve(__dirname, 'src/index.html'),
-        // about: resolve(__dirname, 'src/about.html'),
+        main: resolve(__dirname, 'src/scripts/main.js'),
+        style: resolve(__dirname, 'src/styles/main.css'),
       },
     },
-  },
-  plugins: [
-    handlebars({
-      partialDirectory: resolve(__dirname, 'src/partials'),
-      context(pagePath) {
-        return pageData[pagePath] ?? {};
-      },
-    }),
-  ],
-  server: {
-    open: true,
   },
 });
