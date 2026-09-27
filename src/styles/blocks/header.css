@@ -57,10 +57,28 @@
   transform: translateY(-8px) rotate(-45deg);
 }
 
+.header__overlay {
+  position: absolute;
+  inset-block-start: 100%;
+  inset-inline: 0;
+  block-size: 100vh;
+  background: #304d6073;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity var(--transition),
+    visibility var(--transition);
+}
+
+.header__overlay--open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header__nav {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
   gap: 1.5rem;
   position: absolute;
   inset-block-start: 100%;
@@ -91,6 +109,10 @@
 @media (width >= 768px) {
   .header {
     padding-block: 1.5rem;
+  }
+
+  .header__overlay {
+    display: none;
   }
 
   .header__toggle {

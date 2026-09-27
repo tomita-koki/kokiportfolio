@@ -4,20 +4,14 @@ import { initContact } from './modules/contact.js';
 import { initFaq } from './modules/faq.js';
 import { initReveal } from './modules/reveal.js';
 import { initLoading } from './modules/loading.js';
+import { initBackTop } from './modules/back-top.js';
 initLoading();
 initHamburger();
 initWorks();
 initContact();
 initFaq();
 initReveal();
-const backTop = document.querySelector('[data-back-top]');
-if (backTop) {
-  const update = () => {
-    backTop.hidden = window.scrollY < 400;
-  };
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-}
+initBackTop();
 const header = document.querySelector('.header');
 const hero = document.querySelector('.hero');
 if (header && hero) {

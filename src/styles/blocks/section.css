@@ -10,6 +10,7 @@
 
 .section__heading {
   display: grid;
+  align-content: start;
   gap: 0.5rem;
 }
 

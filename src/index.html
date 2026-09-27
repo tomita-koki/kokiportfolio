@@ -12,11 +12,20 @@
         document.querySelector('[data-loading]')?.remove();
       }, 12000);
     </script>
-    <title>{{title}}</title>
-    <meta name="description" content="{{description}}">
-    <meta property="og:title" content="{{title}}">
-    <meta property="og:description" content="{{description}}">
+    <title>とこ | 話すことから、はじまるWeb制作。</title>
+    <meta name="description" content="個人で活動するあなたの、Web制作の相談相手。想いや困りごとを一緒に整理し、デザインからコーディング、WordPress、公開後の更新までひとつの窓口でお手伝いします。">
+    <link rel="canonical" href="https://kokiportfolio.com/">
+    <meta property="og:title" content="とこ | 話すことから、はじまるWeb制作。">
+    <meta property="og:description" content="個人で活動するあなたの、Web制作の相談相手。想いや困りごとを一緒に整理し、デザインからコーディング、WordPress、公開後の更新までひとつの窓口でお手伝いします。">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kokiportfolio.com/">
+    <meta property="og:site_name" content="とこ">
+    <meta property="og:locale" content="ja_JP">
+    <meta property="og:image" content="https://kokiportfolio.com/ogp.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="とこ 話すことから、はじまるWeb制作。">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="./favicon.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,9 +52,31 @@
       </div>
     </div>
     <a class="skip-link" href="#main">本文へ移動</a>
-    {{> header}}
+    <header class="header">
+      <div class="header__overlay" data-nav-overlay></div>
+      <div class="header__inner">
+        <a class="logo" href="#top" aria-label="とこ ホーム"><img class="logo__image" src="./assets/img/common/logo.svg" alt="" width="40" height="40"></a>
+        <button class="header__toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="navigation" data-nav-toggle>
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+          <span class="header__line"></span>
+        </button>
+        <nav class="header__nav" id="navigation" aria-label="メインナビゲーション" data-nav>
+          <a class="header__link" href="#service">SERVICE</a>
+          <a class="header__link" href="#works">WORKS</a>
+          <a class="header__link" href="#about">ABOUT</a>
+          <a class="header__link" href="#faq">FAQ</a>
+          <a class="button button--primary" href="#contact">
+            CONTACT
+            <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+              <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
     <main id="main">
-      <section class="hero" data-hero aria-labelledby="hero-title">
+      <section class="hero" id="top" data-hero aria-labelledby="hero-title">
         <div class="hero__shapes" data-hero-background aria-hidden="true">
           <span class="hero__shape hero__shape--0"></span>
           <span class="hero__shape hero__shape--1"></span>
@@ -80,9 +111,13 @@
           <div class="hero__visual">
             <p class="hero__visual-title">想いを聞いて、ひとつずつ形に。</p>
             <img src="./assets/img/works/img-work-01.png" alt="世界史制服のWebサイト" width="800" height="500" class="hero__image" data-hero-background fetchpriority="high">
-            <p class="hero__caption">WORKS 01　世界史制服 様</p>
+            <p class="hero__caption">世界史制服 様</p>
             <p class="hero__category">コーディング・WordPress</p>
-            <p class="hero__message">話を聞く。一緒に考える。丁寧につくる。</p>
+            <div class="hero__message-area">
+              <p class="hero__message">話を聞く</p>
+              <p class="hero__message">一緒に考える</p>
+              <p class="hero__message">丁寧につくる</p>
+            </div>
           </div>
         </div>
       </section>
@@ -121,9 +156,7 @@
             </h2>
           </div>
           <p class="service__intro">
-              つくって終わりではなく、
-              <span class="mobile-break">使い続けられるサイトへ。</span>
-              <span class="mobile-break">5つのステップでお手伝いします。</span>
+              つくって終わりではなく、<span class="mobile-break">使い続けられるサイトへ。</span><span class="mobile-break">5つのステップでお手伝いします。</span>
             </p>
           <ol class="service__steps">
             <li class="service__step">
@@ -192,8 +225,8 @@
           </p>
           <aside class="service__director" aria-label="制作会社・ディレクターの方へ">
             <p>
-              <span class="text-line">制作会社・ディレクターの方へ</span>
-              デザインをご用意いただいてのコーディングも承ります。
+              <span class="text-line">ディレクターの方へ</span>
+              コーディングのみのご依頼も承ります。1ページ単位・既存サイトの修正など、部分的なご相談も歓迎です。
             </p>
             <a class="button button--primary" href="#contact">
               実装について相談する
@@ -218,7 +251,7 @@
             <div class="swiper-wrapper">
               <article class="swiper-slide works__card">
                 <a class="works__link" href="https://sekaishiseifuku.com/" target="_blank" rel="noopener noreferrer" aria-label="世界史制服 様（新しいタブで開く）">
-                  <img src="./assets/img/works/img-work-01.png" alt="世界史制服 様のサイト画面" width="800" height="500" class="works__image" loading="lazy">
+                  <img src="./assets/img/works/img-work-01.png" alt="世界史制服 様のサイト画面" width="800" height="500" class="works__image" loading="lazy" decoding="async">
                   <div class="works__caption">
                     <p class="works__category">実案件</p>
                     <h3 class="works__title">
@@ -236,9 +269,9 @@
               </article>
               <article class="swiper-slide works__card">
                 <a class="works__link" href="https://koki-code.com/" target="_blank" rel="noopener noreferrer" aria-label="koki-code.com（新しいタブで開く）">
-                  <img src="./assets/img/works/img-work-02.png" alt="koki-code.comのサイト画面" width="800" height="500" class="works__image" loading="lazy">
+                  <img src="./assets/img/works/img-work-02.png" alt="koki-code.comのサイト画面" width="800" height="500" class="works__image" loading="lazy" decoding="async">
                   <div class="works__caption">
-                    <p class="works__category">自身のサイト</p>
+                    <p class="works__category">自主制作</p>
                     <h3 class="works__title">
                       koki-code.com
                       <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -251,7 +284,7 @@
               </article>
               <article class="swiper-slide works__card">
                 <a class="works__link" href="https://nagi-sauna.syukatutomi.workers.dev/" target="_blank" rel="noopener noreferrer" aria-label="凪 — NAGI —（新しいタブで開く）">
-                  <img src="./assets/img/works/img-work-03.png" alt="凪 — NAGI —のサイト画面" width="800" height="500" class="works__image" loading="lazy">
+                  <img src="./assets/img/works/img-work-03.png" alt="凪 — NAGI —のサイト画面" width="800" height="500" class="works__image" loading="lazy" decoding="async">
                   <div class="works__caption">
                     <p class="works__category">自主制作</p>
                     <h3 class="works__title">
@@ -264,10 +297,56 @@
                   </div>
                 </a>
               </article>
+              <article class="swiper-slide works__card">
+                <a class="works__link" href="https://onlinevideoschool.pages.dev/" target="_blank" rel="noopener noreferrer" aria-label="オンラインスクール LP（新しいタブで開く）">
+                  <img src="./assets/img/works/img-work-04.jpg" alt="オンラインスクール LPのサイト画面" width="800" height="500" class="works__image" loading="lazy" decoding="async">
+                  <div class="works__caption">
+                    <p class="works__category">自主制作</p>
+                    <h3 class="works__title">
+                      オンラインスクール LP
+                      <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </h3>
+                    <p class="works__description">申込導線まで設計したオンライン教育サービスのLP</p>
+                  </div>
+                </a>
+              </article>
+              <article class="swiper-slide works__card">
+                <a class="works__link" href="https://tomita-koki.github.io/cooking/" target="_blank" rel="noopener noreferrer" aria-label="エプロンコネクト（新しいタブで開く）">
+                  <img src="./assets/img/works/img-work-05.jpg" alt="エプロンコネクトのサイト画面" width="800" height="500" class="works__image" loading="lazy" decoding="async">
+                  <div class="works__caption">
+                    <p class="works__category">自主制作</p>
+                    <h3 class="works__title">
+                      エプロンコネクト
+                      <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      </svg>
+                    </h3>
+                    <p class="works__description">自宅で受講できるオンライン料理教室のLP</p>
+                  </div>
+                </a>
+              </article>
+              <article class="swiper-slide works__card">
+                <div class="works__nda">
+                  <div class="works__lock" aria-hidden="true">
+                    <svg class="works__lock-icon" viewBox="0 0 24 24" fill="none" focusable="false">
+                      <rect x="4" y="11" width="16" height="10" rx="2" stroke="currentColor" stroke-width="1.5"></rect>
+                      <path d="M8 11V7a4 4 0 018 0v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+                    </svg>
+                    <p class="works__lock-label">CONFIDENTIAL</p>
+                  </div>
+                  <div class="works__caption">
+                    <p class="works__category">実案件・非公開</p>
+                    <h3 class="works__title">非公開案件（2件）</h3>
+                    <p class="works__description">守秘義務（NDA）のため詳細は非公開。お打ち合わせの際に可能な範囲でご紹介します</p>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
           <div class="works__controls">
-            <p class="works__count" data-works-count aria-live="polite">01 / 03</p>
+            <p class="works__count" data-works-count aria-live="polite">01 / 06</p>
             <div class="works__arrows">
               <button class="button button--primary button--round" type="button" aria-label="前の制作実績" data-works-prev>
                 <svg class="icon-arrow icon-arrow--reverse" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
@@ -288,13 +367,12 @@
           <p class="section__eyebrow">03 / ABOUT</p>
           <div class="about__profile">
             <div class="about__portrait">
-              <img src="./assets/img/about/profile.png" alt="とこのプロフィール写真" width="1043" height="936" loading="lazy" decoding="async">
+              <img src="./assets/img/about/profile.webp" alt="とこのプロフィール写真" width="802" height="720" loading="lazy" decoding="async">
             </div>
             <div class="about__bio">
               <p class="section__eyebrow">TOKYO, JAPAN</p>
               <h2 class="section__title" id="about-title">
-                はじめまして、
-                <span class="mobile-break">とこです。</span>
+                はじめまして。
               </h2>
               <p>
                 <span class="text-line">東京都を拠点にWeb制作をしています。</span>
@@ -374,7 +452,7 @@
                 <span class="faq__icon" aria-hidden="true"></span>
               </summary>
               <p class="faq__answer">
-                まずは活動のことや、つくりたいもの、お困りのことをお聞かせください。必要な文章や写真は、お話を伺いながらご案内します。
+                最初は何も用意しなくて大丈夫です。サイトに載せる文章や写真はお客様にご用意いただいていますが、準備が難しい場合もご相談ください。お話を伺いながら、一緒に考えます。
               </p>
             </details>
             <details class="faq__item" id="faq-schedule">
@@ -418,31 +496,26 @@
               <span class="text-line">内容を伺って、個別にお見積もりします。</span>
               作業範囲と費用を確認してから、制作を始めます。
             </p>
-            <span class="contact__arrow">
-              <svg class="icon-arrow" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
-                <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </span>
           </div>
           <form class="contact__form" data-contact-form>
             <div class="contact__field">
               <label for="contact-name">
-                <span class="contact__required">必須</span>
-                　お名前
+                お名前
+                <span class="contact__required" aria-hidden="true">※</span>
               </label>
               <input class="contact__input" id="contact-name" type="text" name="name" autocomplete="name" placeholder="山田 太郎" required maxlength="100">
             </div>
             <div class="contact__field">
               <label for="contact-email">
-                <span class="contact__required">必須</span>
-                　メールアドレス
+                メールアドレス
+                <span class="contact__required" aria-hidden="true">※</span>
               </label>
               <input class="contact__input" id="contact-email" name="email" type="email" autocomplete="email" placeholder="hello@example.com" required maxlength="254">
             </div>
             <div class="contact__field">
               <label for="contact-message">
-                <span class="contact__required">必須</span>
-                　ご相談内容
+                ご相談内容
+                <span class="contact__required" aria-hidden="true">※</span>
               </label>
               <textarea class="contact__input contact__input--message" id="contact-message" name="message" placeholder="つくりたいもの、お困りのことなど。&#10;まだまとまっていなくても大丈夫です。" required maxlength="5000"></textarea>
             </div>
@@ -469,7 +542,20 @@
         </svg>
       </section>
     </main>
-    {{> footer}}
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__row">
+          <a class="logo" href="#top" aria-label="とこ ホーム"><img class="logo__image" src="./assets/img/common/logo.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></a>
+          <p class="footer__tagline">話を聞いて、一緒につくるWebサイト。</p>
+        </div>
+        <small class="footer__copyright">© とこ</small>
+      </div>
+    </footer>
+    <a class="button button--primary button--round back-top" href="#top" aria-label="ページの先頭へ戻る" data-back-top>
+      <svg class="icon-arrow icon-arrow--up" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false">
+        <path d="M9 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+      </svg>
+    </a>
     <dialog class="confirmation" data-confirmation aria-labelledby="confirmation-title">
       <h2 class="confirmation__title" id="confirmation-title">入力内容の確認</h2>
       <dl class="confirmation__list">

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fffefa"/>
+  <circle cx="1105" cy="120" r="260" fill="#f0f7fb"/>
+  <circle cx="1010" cy="580" r="140" fill="#f0f7fb"/>
+  <g transform="translate(96,84) scale(2.4)">
+    <path d="M29.0909 0H10.9091C4.88417 0 0 4.88417 0 10.9091V29.0909C0 35.1158 4.88417 40 10.9091 40H29.0909C35.1158 40 40 35.1158 40 29.0909V10.9091C40 4.88417 35.1158 0 29.0909 0Z" fill="#F0F7FB"/>
+    <path d="M9.09082 30.9091V20C9.09082 13.4545 13.9999 9.09091 19.9999 9.09091C25.9999 9.09091 30.909 13.4545 30.909 20V30.9091" stroke="#3276AA" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <path d="M9.09082 30.9091H15.4545M24.5454 30.9091H30.909" stroke="#3276AA" stroke-width="2.8" stroke-linecap="round" fill="none"/>
+    <path d="M19.9998 25.6364C22.1085 25.6364 23.818 23.9269 23.818 21.8182C23.818 19.7095 22.1085 18 19.9998 18C17.8911 18 16.1816 19.7095 16.1816 21.8182C16.1816 23.9269 17.8911 25.6364 19.9998 25.6364Z" fill="#E2B85D"/>
+  </g>
+  <text x="212" y="152" font-family="Yu Gothic UI, Meiryo, sans-serif" font-size="46" font-weight="700" fill="#304d60" letter-spacing="4">とこ</text>
+  <text x="96" y="320" font-family="Yu Gothic UI, Meiryo, sans-serif" font-size="68" font-weight="700" fill="#304d60" letter-spacing="3">話すことから、</text>
+  <text x="96" y="412" font-family="Yu Gothic UI, Meiryo, sans-serif" font-size="68" font-weight="700" fill="#304d60" letter-spacing="3">はじまるWeb制作。</text>
+  <rect x="96" y="470" width="88" height="6" rx="3" fill="#e2b85d"/>
+  <text x="96" y="546" font-family="Yu Gothic UI, Meiryo, sans-serif" font-size="30" font-weight="500" fill="#3276aa" letter-spacing="2">kokiportfolio.com</text>
+</svg>

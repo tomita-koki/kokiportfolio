@@ -12,3 +12,7 @@
 .icon-arrow--down {
   transform: rotate(90deg);
 }
+
+.icon-arrow--up {
+  transform: rotate(-90deg);
+}

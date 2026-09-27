@@ -44,7 +44,8 @@
 }
 
 .contact__required {
-  color: var(--color-white);
+  margin-inline-start: 0.25rem;
+  color: var(--color-required);
   font-weight: 700;
 }
 

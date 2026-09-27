@@ -1,10 +1,12 @@
 export function initHamburger() {
   const toggle = document.querySelector('[data-nav-toggle]');
   const nav = document.querySelector('[data-nav]');
+  const overlay = document.querySelector('[data-nav-overlay]');
   if (!toggle || !nav) return;
   const desktop = matchMedia('(min-width: 768px)');
   const setOpen = (open, focus = false) => {
     nav.classList.toggle('header__nav--open', open);
+    overlay?.classList.toggle('header__overlay--open', open);
     toggle.setAttribute('aria-expanded', String(open));
     toggle.setAttribute('aria-label', open ? 'メニューを閉じる' : 'メニューを開く');
     document.body.style.overflow = open ? 'hidden' : '';

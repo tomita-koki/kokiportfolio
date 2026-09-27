@@ -2,13 +2,11 @@ import { defineConfig } from 'vite';
 import { resolve } from 'node:path';
 import handlebars from 'vite-plugin-handlebars';
 
-/** ページごとに差し込む値。ページを増やしたら input と pageData の両方に追加する */
-const pageData = {
-  '/index.html': {
-    title: 'とこ | 話すことから、はじまるWeb制作。',
-    description: '個人で活動するあなたの、Web制作の相談相手。想いや困りごとを一緒に整理し、デザインからコーディング、WordPress、公開後の更新までひとつの窓口でお手伝いします。',
-  },
-};
+/**
+ * ページごとに差し込む値。ページを増やしたら input と pageData の両方に追加する。
+ * index.html の title / description は HTML に直接書いてあるのでここには置かない。
+ */
+const pageData = {};
 
 export default defineConfig({
   root: 'src',
