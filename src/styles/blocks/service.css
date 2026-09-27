@@ -69,6 +69,10 @@
   background: var(--color-bg-sub);
 }
 
+.service__text {
+  width: min(100%, 700px);
+}
+
 @media (width >= 768px) {
   .service__intro {
     color: var(--color-text);
